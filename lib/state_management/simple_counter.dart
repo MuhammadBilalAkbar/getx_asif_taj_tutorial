@@ -2,14 +2,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-class CounterExample extends StatefulWidget {
-  const CounterExample({Key? key}) : super(key: key);
+class SimpleCounter extends StatefulWidget {
+  const SimpleCounter({Key? key}) : super(key: key);
 
   @override
-  State<CounterExample> createState() => _CounterExampleState();
+  State<SimpleCounter> createState() => _SimpleCounterState();
 }
 
-class _CounterExampleState extends State<CounterExample> {
+class _SimpleCounterState extends State<SimpleCounter> {
   int x = 20;
 
   // @override
