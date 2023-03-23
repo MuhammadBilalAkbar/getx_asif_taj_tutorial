@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_asif_taj_tutorial/state_management/counter_controller.dart';
 
-class GetxCounter extends StatefulWidget {
-  const GetxCounter({Key? key}) : super(key: key);
+class GetXCounter extends StatefulWidget {
+  const GetXCounter({Key? key}) : super(key: key);
 
   @override
-  State<GetxCounter> createState() => _GetxCounterState();
+  State<GetXCounter> createState() => _GetXCounterState();
 }
 
-class _GetxCounterState extends State<GetxCounter> {
+class _GetXCounterState extends State<GetXCounter> {
   final controller = Get.put(CounterController());
 
   @override
@@ -17,7 +16,7 @@ class _GetxCounterState extends State<GetxCounter> {
     debugPrint('Rebuild');
     return Scaffold(
       appBar: AppBar(
-        title: Text('GetX Counter Example'),
+        title: const Text('GetX Example One Counter'),
       ),
       body: Center(
         child: Obx(() {
@@ -31,5 +30,14 @@ class _GetxCounterState extends State<GetxCounter> {
         },
       ),
     );
+  }
+}
+
+class CounterController extends GetxController {
+  RxInt counter = 1.obs;
+
+  incrementCounter() {
+    counter.value++;
+    debugPrint(counter.value.toString());
   }
 }

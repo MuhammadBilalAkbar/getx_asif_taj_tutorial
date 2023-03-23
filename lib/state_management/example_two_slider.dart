@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ExampleTwo extends StatefulWidget {
-  const ExampleTwo({Key? key}) : super(key: key);
+class ExampleTwoSlider extends StatefulWidget {
+  const ExampleTwoSlider({Key? key}) : super(key: key);
 
   @override
-  State<ExampleTwo> createState() => _ExampleTwoState();
+  State<ExampleTwoSlider> createState() => _ExampleTwoSliderState();
 }
 
-class _ExampleTwoState extends State<ExampleTwo> {
-  double opacity = 0.4;
+class _ExampleTwoSliderState extends State<ExampleTwoSlider> {
+  // double opacity = 0.4;
 
-  final exampleTwoController = Get.put(ExampleTwoController());
+  final exampleTwoController = Get.put(SliderController());
 
   @override
   Widget build(BuildContext context) {
     debugPrint('rebuild');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('GetX Example Two'),
+        title: const Text('GetX Example Two Slider'),
       ),
       body: Column(
         children: [
@@ -47,7 +47,7 @@ class _ExampleTwoState extends State<ExampleTwo> {
   }
 }
 
-class ExampleTwoController extends GetxController {
+class SliderController extends GetxController {
   final opacity = 0.4.obs;
 
   setOpacity(double newValue) => opacity.value = newValue;

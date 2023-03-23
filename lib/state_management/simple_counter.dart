@@ -27,7 +27,7 @@ class _SimpleCounterState extends State<SimpleCounter> {
     debugPrint('Rebuild');
     return Scaffold(
       appBar: AppBar(
-        title: Text('GetX Counter Example'),
+        title: const Text('setState Counter Example'),
       ),
       body: Center(
         child: Column(
